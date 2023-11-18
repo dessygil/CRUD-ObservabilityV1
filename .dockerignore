@@ -1,0 +1,28 @@
+# Ignore development and build files
+node_modules
+.out
+.env
+.env.local
+
+# Ignore version control files and directories
+.git
+.gitignore
+
+# Ignore editor-specific files and directories
+.vscode
+.idea
+
+# Ignore package manager lock files
+yarn.lock
+package-lock.json
+
+# Ignore logs and temporary files
+npm-debug.log
+
+# Ignore testing-related files
+coverage
+
+# Ignore documentation files
+README.md
+
+# Ignore any other files or directories specific to your development environment or project structure

@@ -1,0 +1,30 @@
+# Exclude version control directories and files
+.git
+.gitignore
+.gitattributes
+
+# Exclude Go test and coverage files
+*.test
+*.out
+*.cover
+
+# Exclude editor-specific files
+.vscode/
+.idea/
+
+# Exclude build-related files
+*.exe
+*.dll
+
+# Exclude temporary build directories
+/bin/
+/pkg/
+/vendor/
+/.cache/
+
+# Exclude documentation and other non-essential files
+doc/
+docs/
+*.md
+
+# Exclude any other files or directories that are not needed in the Docker image
