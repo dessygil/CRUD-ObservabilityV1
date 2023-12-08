@@ -8,14 +8,12 @@ const CreatePost: React.FC = () => {
     const [content, setContent] = useState('');
 
     const handleCreatePost = () => {
-        // Prepare the data for the new post
         const postData = {
             name: name,
             header: header,
             content: content,
         };
-        
-        // Send a POST request to create the post
+
         axios.post('http://localhost:8080/post', postData)
             .then((response) => {
                 console.log('Post created successfully:', response.data);
@@ -39,7 +37,7 @@ const CreatePost: React.FC = () => {
                     <input
                         type="text"
                         id="name"
-                        className="w-full px-3 py-2 border rounded-lg"
+                        className="w-full text-black px-3 py-2 border rounded-lg"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
@@ -51,18 +49,18 @@ const CreatePost: React.FC = () => {
                     <input
                         type="text"
                         id="header"
-                        className="w-full px-3 py-2 border rounded-lg"
+                        className="w-full px-3 text-black py-2 border rounded-lg"
                         value={header}
                         onChange={(e) => setHeader(e.target.value)}
                     />
                 </div>
                 <div className="mb-6">
-                    <label htmlFor="content" className="block text-gray-600 font-semibold mb-2">
+                    <label htmlFor="content" className="block text-black font-semibold mb-2">
                         Content
                     </label>
                     <textarea
                         id="content"
-                        className="w-full px-3 py-2 border rounded-lg"
+                        className="w-full px-3 text-black py-2 border rounded-lg"
                         rows={5}
                         value={content}
                         onChange={(e) => setContent(e.target.value)}

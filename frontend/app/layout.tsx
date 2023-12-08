@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import DatadogInit from "./datadog-init";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
             <h1 className="text-2xl font-bold">Observability Test App</h1>
           </header>
           <main className="container mx-auto p-4">
+            <DatadogInit />
             {children}
           </main>
           <footer className="bg-blue-500 p-4 text-white text-center">
